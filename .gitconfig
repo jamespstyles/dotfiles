@@ -32,9 +32,14 @@
   added = yellow bold 
   changed = green
   untracked = cyan
-[mergetool]
-	keepBackup = true
+[difftool "sourcetree"]
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path = 
+[mergetool "sourcetree"]
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
 [merge]
   log = true
 [user]
-	email = reuben@domain7.com
+  name = James Styles
+  email = james.styles@domain7.com
